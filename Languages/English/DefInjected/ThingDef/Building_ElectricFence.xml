@@ -1,49 +1,49 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
   <!-- electrical fence -->
 
   <Electric_fence.label>Electric Fence</Electric_fence.label>
   <Electric_fence.description>An electric fence is a barrier that uses electric shocks to deter animals from crossing a boundary. The voltage of the shock may have effects ranging from discomfort to death.</Electric_fence.description>
-  <Electric_fence_Blueprint.label>Electric Fence (blueprint)</Electric_fence_Blueprint.label>
-  <Electric_fence_Frame.label>Electric Fence (building)</Electric_fence_Frame.label>
-  <Electric_fence_Frame.description>An electric fence is a barrier that uses electric shocks to deter animals from crossing a boundary. The voltage of the shock may have effects ranging from discomfort to death.</Electric_fence_Frame.description>
+  <Blueprint_Electric_fence.label>Electric Fence (blueprint)</Blueprint_Electric_fence.label>
+  <Frame_Electric_fence.label>Electric Fence (building)</Frame_Electric_fence.label>
+  <Frame_Electric_fence.description>An electric fence is a barrier that uses electric shocks to deter animals from crossing a boundary. The voltage of the shock may have effects ranging from discomfort to death.</Frame_Electric_fence.description>
 
 
   <!-- electrical fence door -->
 
   <Electric_fence_door.label>Electric Fence Gate</Electric_fence_door.label>
   <Electric_fence_door.description>Electric Fence gate which is passable without any danger for the home crew. But still damages any hostile trying to pass through.</Electric_fence_door.description>
-  <Electric_fence_door_Blueprint.label>Electric Fence Gate (blueprint)</Electric_fence_door_Blueprint.label>
-  <Electric_fence_door_Frame.label>Electric Fence Gate (building)</Electric_fence_door_Frame.label>
-  <Electric_fence_door_Frame.description>Electric Fence gate which is passable without any danger for the home crew. But still damages any hostile trying to pass through.</Electric_fence_door_Frame.description>
+  <Blueprint_Electric_fence_door.label>Electric Fence Gate (blueprint)</Blueprint_Electric_fence_door.label>
+  <Frame_Electric_fence_door.label>Electric Fence Gate (building)</Frame_Electric_fence_door.label>
+  <Frame_Electric_fence_door.description>Electric Fence gate which is passable without any danger for the home crew. But still damages any hostile trying to pass through.</Frame_Electric_fence_door.description>
 
 
   <!-- plasma fence -->
 
   <Plasma_fence.label>Plasma Fence</Plasma_fence.label>
   <Plasma_fence.description>Plasma fence is an advanced version of electric fence that require high grade materials and careful assembly. Any hostile who tries to pass through is in danger of being burned by electric plasma arc.</Plasma_fence.description>
-  <Plasma_fence_Blueprint.label>Plasma Fence (blueprint)</Plasma_fence_Blueprint.label>
-  <Plasma_fence_Frame.label>Plasma Fence (building)</Plasma_fence_Frame.label>
-  <Plasma_fence_Frame.description>Plasma fence is an advanced version of electric fence that require high grade materials and careful assembly. Any hostile who tries to pass through is in danger of being burned by electric plasma arc.</Plasma_fence_Frame.description>
+  <Blueprint_Plasma_fence.label>Plasma Fence (blueprint)</Blueprint_Plasma_fence.label>
+  <Frame_Plasma_fence.label>Plasma Fence (building)</Frame_Plasma_fence.label>
+  <Frame_Plasma_fence.description>Plasma fence is an advanced version of electric fence that require high grade materials and careful assembly. Any hostile who tries to pass through is in danger of being burned by electric plasma arc.</Frame_Plasma_fence.description>
 
 
   <!-- plasma fence door -->
 
   <Plasma_fence_door.label>Plasma Fence Gate</Plasma_fence_door.label>
   <Plasma_fence_door.description>Plasma Fence gate which is passable without any danger for the home crew. But still damages any hostile trying to pass through.</Plasma_fence_door.description>
-  <Plasma_fence_door_Blueprint.label>Plasma Fence Gate (blueprint)</Plasma_fence_door_Blueprint.label>
-  <Plasma_fence_door_Frame.label>Plasma Fence Gate (building)</Plasma_fence_door_Frame.label>
-  <Plasma_fence_door_Frame.description>Plasma Fence gate which is passable without any danger for the home crew. But still damages any hostile trying to pass through.</Plasma_fence_door_Frame.description>
+  <Blueprint_Plasma_fence_door.label>Plasma Fence Gate (blueprint)</Blueprint_Plasma_fence_door.label>
+  <Frame_Plasma_fence_door.label>Plasma Fence Gate (building)</Frame_Plasma_fence_door.label>
+  <Frame_Plasma_fence_door.description>Plasma Fence gate which is passable without any danger for the home crew. But still damages any hostile trying to pass through.</Frame_Plasma_fence_door.description>
 
 
   <!-- trap floor panel -->
 
   <electricPanel.label>Shock floor panel</electricPanel.label>
   <electricPanel.description>Electric floor panel that is designed to stun and shock hostiles</electricPanel.description>
-  <electricPanel_Blueprint.label>Shock floor panel (blueprint)</electricPanel_Blueprint.label>
-  <electricPanel_Frame.label>Shock floor panel (building)</electricPanel_Frame.label>
-  <electricPanel_Frame.description>Electric floor panel that is designed to stun and shock hostiles</electricPanel_Frame.description>
+  <Blueprint_electricPanel.label>Shock floor panel (blueprint)</Blueprint_electricPanel.label>
+  <Frame_electricPanel.label>Shock floor panel (building)</Frame_electricPanel.label>
+  <Frame_electricPanel.description>Electric floor panel that is designed to stun and shock hostiles</Frame_electricPanel.description>
 
 
 </LanguageData>
