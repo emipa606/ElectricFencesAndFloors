@@ -22,9 +22,6 @@
         <edgeRight>Damage/Edge</edgeRight>
       </damageData>
     </graphicData>
-    <comps>
-      <li Class="CompProperties_Breakdownable" />
-    </comps>
   </ThingDef>
   <ThingDef Name="ElectricFence_base" ParentName="Fence_buildingBase" Abstract="True">
     <description>Base Class for Fences</description>
