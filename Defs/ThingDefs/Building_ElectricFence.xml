@@ -10,6 +10,9 @@
     <repairEffect>Repair</repairEffect>
     <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
     <filthLeaving>Filth_RubbleBuilding</filthLeaving>
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
     <graphicData>
       <damageData>
         <cornerTL>Damage/Corner</cornerTL>
@@ -135,9 +138,6 @@
       </li>
     </comps>
     <fillPercent>0.20</fillPercent>
-    <researchPrerequisites>
-      <li>Electricity</li>
-    </researchPrerequisites>
   </ThingDef>
   <!--electrical fence door-->
   <ThingDef ParentName="Fence_DoorBase">
@@ -235,9 +235,6 @@
       </li>
     </comps>
     <fillPercent>0.20</fillPercent>
-    <researchPrerequisites>
-      <li>Electricity</li>
-    </researchPrerequisites>
   </ThingDef>
   <!--plasma fence door-->
   <ThingDef ParentName="Fence_DoorBase">
@@ -332,8 +329,5 @@
       <Plasteel>2</Plasteel>
       <ComponentIndustrial>1</ComponentIndustrial>
     </costList>
-    <researchPrerequisites>
-      <li>Electricity</li>
-    </researchPrerequisites>
   </ThingDef>
 </Defs>
