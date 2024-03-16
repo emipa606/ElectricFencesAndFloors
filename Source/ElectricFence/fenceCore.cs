@@ -35,9 +35,8 @@ public static class fenceCore
             return false;
         }
 
-        if (p?.guest != null && lord != null && (lord.LordJob is LordJob_FormAndSendCaravan ||
-                                                 lord.LordJob is LordJob_AssistColony ||
-                                                 lord.LordJob is LordJob_VisitColony))
+        if (p?.guest != null && lord != null &&
+            lord.LordJob is LordJob_FormAndSendCaravan or LordJob_AssistColony or LordJob_VisitColony)
         {
             // caravans, friendlies, visitors
             return true;
@@ -49,7 +48,7 @@ public static class fenceCore
             return true;
         }
 
-        if (p?.guest != null && p.guest.IsPrisoner && !p.guest.PrisonerIsSecure && !p.guest.Released &&
+        if (p?.guest is { IsPrisoner: true, PrisonerIsSecure: false, Released: false } &&
             p.HostileTo(f))
         {
             // escaping prisoners
@@ -62,7 +61,7 @@ public static class fenceCore
             return true;
         }
 
-        return p?.Faction != null && p.Faction.IsPlayer && p.RaceProps.Humanlike;
+        return p?.Faction is { IsPlayer: true } && p.RaceProps.Humanlike;
         // player humanlike pawns
     }
 

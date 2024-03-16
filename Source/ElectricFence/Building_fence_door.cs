@@ -13,7 +13,7 @@ public class Building_fence_door : Building_Door
     //
     // Fields
     //
-    private List<Pawn> touchingPawns = new List<Pawn>();
+    private List<Pawn> touchingPawns = [];
 
     public CompPower FencePowerComp => GetComp<CompPower>();
 

@@ -14,7 +14,7 @@ public class Building_floor_panel : Building_Trap
     //
     // Fields
     //
-    private List<Pawn> touchingPawns = new List<Pawn>();
+    private List<Pawn> touchingPawns = [];
 
     public CompPower FencePowerComp => GetComp<CompPower>();
 

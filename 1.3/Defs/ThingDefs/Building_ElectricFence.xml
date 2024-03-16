@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="Fence_buildingBase" Abstract="True">
+    <category>Building</category>
+    <thingClass>Building</thingClass>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>Filth_RubbleBuilding</filthLeaving>
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
+    <graphicData>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+        <edgeTop>Damage/Edge</edgeTop>
+        <edgeBot>Damage/Edge</edgeBot>
+        <edgeLeft>Damage/Edge</edgeLeft>
+        <edgeRight>Damage/Edge</edgeRight>
+      </damageData>
+    </graphicData>
+  </ThingDef>
+  <ThingDef Name="ElectricFence_base" ParentName="Fence_buildingBase" Abstract="True">
+    <description>Base Class for Fences</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/Wall</texPath>
+      <graphicClass>Graphic_Appearances</graphicClass>
+      <linkType>Basic</linkType>
+    </graphicData>
+    <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <WorkToBuild>150</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <altitudeLayer>Building</altitudeLayer>
+    <castEdgeShadows>true</castEdgeShadows>
+    <coversFloor>false</coversFloor>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <rotatable>false</rotatable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <passability>Impassable</passability>
+    <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+    <blockLight>false</blockLight>
+    <blockWind>false</blockWind>
+    <holdsRoof>false</holdsRoof>
+    <building>
+      <isInert>true</isInert>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>2</multiplier>
+      </li>
+    </damageMultipliers>
+    <designationCategory>Security</designationCategory>
+  </ThingDef>
+  <ThingDef Name="Fence_DoorBase" ParentName="Fence_buildingBase" Abstract="True">
+    <thingClass>Building_Door</thingClass>
+    <category>Building</category>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
+    <fillPercent>1</fillPercent>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <holdsRoof>false</holdsRoof>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <blockLight>false</blockLight>
+    <building>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <canPlaceOverWall>true</canPlaceOverWall>
+    </building>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+  </ThingDef>
+  <!--electrical fence-->
+  <ThingDef ParentName="ElectricFence_base">
+    <defName>Electric_fence</defName>
+    <thingClass>ElectricFence.Building_fence</thingClass>
+    <label>Electric Fence</label>
+    <description>An electric fence is a barrier that uses electric shocks to deter animals from crossing a boundary. The voltage of the shock may have effects ranging from discomfort to death.</description>
+    <graphicData>
+      <texPath>Building/Fence/ElectricFence_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkFlags>
+        <li>Sandbags</li>
+        <li>PowerConduit</li>
+      </linkFlags>
+    </graphicData>
+    <uiIconPath>Building/Fence/ElectricFence_MenuIcon</uiIconPath>
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Beauty>-2</Beauty>
+      <TrapMeleeDamage>1</TrapMeleeDamage>
+      <TrapSpringChance>1.0</TrapSpringChance>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>20</costStuffCount>
+    <building>
+      <isTrap>true</isTrap>
+      <trapDamageCategory>Sharp</trapDamageCategory>
+      <blueprintGraphicData>
+        <texPath>Building/Fence/ElectricFence_Blueprint_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <pathCost>800</pathCost>
+    <passability>PassThroughOnly</passability>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTransmitter</compClass>
+        <transmitsPower>true</transmitsPower>
+      </li>
+    </comps>
+    <fillPercent>0.20</fillPercent>
+  </ThingDef>
+  <!--electrical fence door-->
+  <ThingDef ParentName="Fence_DoorBase">
+    <defName>Electric_fence_door</defName>
+    <thingClass>ElectricFence.Building_fence_door</thingClass>
+    <label>Electric Fence Gate</label>
+    <description>Electric Fence gate which is passable without any danger for the home crew. But still damages any hostile trying to pass through.</description>
+    <graphicData>
+      <texPath>Building/Fence/ElectricFence_Gate_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <enabled>false</enabled>
+      </damageData>
+      <linkFlags>
+        <li>Sandbags</li>
+        <li>PowerConduit</li>
+      </linkFlags>
+    </graphicData>
+    <holdsRoof>false</holdsRoof>
+    <drawerType>RealtimeOnly</drawerType>
+    <uiIconPath>Building/Fence/ElectricFence_Gate_MenuIcon</uiIconPath>
+    <building>
+      <isTrap>true</isTrap>
+      <trapDamageCategory>Sharp</trapDamageCategory>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <canPlaceOverWall>true</canPlaceOverWall>
+      <blueprintGraphicData>
+        <texPath>Building/Fence/ElectricFence_Gate_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>450</WorkToBuild>
+      <TrapMeleeDamage>1</TrapMeleeDamage>
+      <TrapSpringChance>1.0</TrapSpringChance>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTransmitter</compClass>
+        <transmitsPower>true</transmitsPower>
+      </li>
+    </comps>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>50</costStuffCount>
+  </ThingDef>
+  <!--plasma fence-->
+  <ThingDef ParentName="ElectricFence_base">
+    <defName>Plasma_fence</defName>
+    <thingClass>ElectricFence.Building_p_fence</thingClass>
+    <label>Plasma Fence</label>
+    <description>Plasma fence is an advanced version of electric fence that require high grade materials and careful assembly. Any hostile who tries to pass through is in danger of being burned by electric plasma arc.</description>
+    <graphicData>
+      <texPath>Building/Fence/ElectricFenceP_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkFlags>
+        <li>Sandbags</li>
+        <li>PowerConduit</li>
+      </linkFlags>
+    </graphicData>
+    <uiIconPath>Building/Fence/ElectricFenceP_MenuIcon</uiIconPath>
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>450</WorkToBuild>
+      <Beauty>-2</Beauty>
+      <TrapMeleeDamage>1</TrapMeleeDamage>
+      <TrapSpringChance>1.0</TrapSpringChance>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>20</costStuffCount>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <building>
+      <isTrap>true</isTrap>
+      <trapDamageCategory>Sharp</trapDamageCategory>
+      <blueprintGraphicData>
+        <texPath>Building/Fence/ElectricFence_Blueprint_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <pathCost>800</pathCost>
+    <passability>PassThroughOnly</passability>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTransmitter</compClass>
+        <transmitsPower>true</transmitsPower>
+      </li>
+    </comps>
+    <fillPercent>0.20</fillPercent>
+  </ThingDef>
+  <!--plasma fence door-->
+  <ThingDef ParentName="Fence_DoorBase">
+    <defName>Plasma_fence_door</defName>
+    <thingClass>ElectricFence.Building_p_fence_door</thingClass>
+    <label>Plasma Fence Gate</label>
+    <description>Plasma Fence gate which is passable without any danger for the home crew. But still damages any hostile trying to pass through.</description>
+    <graphicData>
+      <texPath>Building/Fence/ElectricFenceP_Gate_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <enabled>false</enabled>
+      </damageData>
+      <linkFlags>
+        <li>Sandbags</li>
+        <li>PowerConduit</li>
+      </linkFlags>
+    </graphicData>
+    <holdsRoof>false</holdsRoof>
+    <drawerType>RealtimeOnly</drawerType>
+    <uiIconPath>Building/Fence/ElectricFenceP_Gate_MenuIcon</uiIconPath>
+    <building>
+      <isTrap>true</isTrap>
+      <trapDamageCategory>Sharp</trapDamageCategory>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <canPlaceOverWall>true</canPlaceOverWall>
+      <blueprintGraphicData>
+        <texPath>Building/Fence/ElectricFence_Gate_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToBuild>550</WorkToBuild>
+      <TrapMeleeDamage>1</TrapMeleeDamage>
+      <TrapSpringChance>1.0</TrapSpringChance>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTransmitter</compClass>
+        <transmitsPower>true</transmitsPower>
+      </li>
+    </comps>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>50</costStuffCount>
+    <costList>
+      <Plasteel>20</Plasteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+  </ThingDef>
+  <!--trap floor panel-->
+  <ThingDef ParentName="Fence_buildingBase">
+    <defName>electricPanel</defName>
+    <label>Shock floor panel</label>
+    <description>Electric floor panel that is designed to stun and shock hostiles</description>
+    <thingClass>ElectricFence.Building_floor_panel</thingClass>
+    <graphicData>
+      <texPath>Building/Fence/ElectricFence_floor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>800</WorkToBuild>
+      <Beauty>-2</Beauty>
+      <TrapMeleeDamage>1</TrapMeleeDamage>
+      <TrapSpringChance>1.0</TrapSpringChance>
+    </statBases>
+    <designationCategory>Security</designationCategory>
+    <passability>Standable</passability>
+    <building>
+      <isTrap>true</isTrap>
+      <trapDamageCategory>Sharp</trapDamageCategory>
+    </building>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTransmitter</compClass>
+        <transmitsPower>true</transmitsPower>
+      </li>
+    </comps>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>40</costStuffCount>
+    <costList>
+      <Plasteel>2</Plasteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+  </ThingDef>
+</Defs>
