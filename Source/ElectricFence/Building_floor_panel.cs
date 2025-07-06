@@ -16,19 +16,19 @@ public class Building_floor_panel : Building_Trap
     //
     private List<Pawn> touchingPawns = [];
 
-    public CompPower FencePowerComp => GetComp<CompPower>();
+    private CompPower FencePowerComp => GetComp<CompPower>();
 
     //
     // Methods
     //
-    private void CheckSpring(Pawn p)
+    private void checkSpring(Pawn p)
     {
-        if (p == null || !SpringChanceFence(p) || GetFenceDamage() <= 0)
+        if (p == null || !springChanceFence(p) || getFenceDamage() <= 0)
         {
             return;
         }
 
-        SpringFence(p);
+        springFence(p);
         if (p.Faction == Faction.OfPlayer || p.HostFaction == Faction.OfPlayer)
         {
             Find.LetterStack.ReceiveLetter("LetterFriendlyTrapSprungLabel".Translate(p.NameShortColored),
@@ -37,7 +37,7 @@ public class Building_floor_panel : Building_Trap
         }
     }
 
-    private int GetFenceDamage()
+    private int getFenceDamage()
     {
         return fenceCore.CoreGetDamage(FencePowerComp);
     }
@@ -48,12 +48,12 @@ public class Building_floor_panel : Building_Trap
         Scribe_Collections.Look(ref touchingPawns, "Building_floor_panel", LookMode.Reference);
     }
 
-    private bool KnowsOfTrapFence(Pawn p)
+    private bool knowsOfTrapFence(Pawn p)
     {
         return fenceCore.CoreKnowsOfTrap(p, Faction);
     }
 
-    private void SpringFence(Pawn p)
+    private void springFence(Pawn p)
     {
         SoundDef.Named("EnergyShieldBroken").PlayOneShot(new TargetInfo(Position, Map));
         //if (p != null && p.Faction != null) {
@@ -62,25 +62,25 @@ public class Building_floor_panel : Building_Trap
         SpringSub(p);
     }
 
-    private bool SpringChanceFence(Pawn p)
+    private bool springChanceFence(Pawn p)
     {
-        return !KnowsOfTrapFence(p);
+        return !knowsOfTrapFence(p);
     }
 
     protected override void SpringSub(Pawn p)
     {
         if (p != null)
         {
-            DamagePawnFence(p);
+            damagePawnFence(p);
         }
     }
 
-    private void DamagePawnFence(Pawn p)
+    private void damagePawnFence(Pawn p)
     {
         // batteries
         fenceCore.CoreDrainPower(FencePowerComp, 150f);
 
-        var num = Mathf.RoundToInt(GetFenceDamage() / (float)4);
+        var num = Mathf.RoundToInt(getFenceDamage() / (float)4);
 
         var height = Rand.Value >= 0.666 ? BodyPartHeight.Middle : BodyPartHeight.Top;
         var dinfo = new DamageInfo(DamageDefOf.Stun, num, -1f, -1f, this);
@@ -95,7 +95,7 @@ public class Building_floor_panel : Building_Trap
         sparks.Cleanup();
     }
 
-    public override void Tick()
+    protected override void Tick()
     {
         var thingList = Position.GetThingList(Map);
         foreach (var thing in thingList)
@@ -106,7 +106,7 @@ public class Building_floor_panel : Building_Trap
             }
 
             touchingPawns.Add(pawn);
-            CheckSpring(pawn);
+            checkSpring(pawn);
         }
 
         for (var j = 0; j < touchingPawns.Count; j++)

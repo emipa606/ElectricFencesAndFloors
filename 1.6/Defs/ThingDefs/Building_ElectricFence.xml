@@ -43,7 +43,7 @@
     <altitudeLayer>Building</altitudeLayer>
     <castEdgeShadows>true</castEdgeShadows>
     <coversFloor>false</coversFloor>
-    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <drawStyleCategory>Walls</drawStyleCategory>
     <rotatable>false</rotatable>
     <neverMultiSelect>true</neverMultiSelect>
     <staticSunShadowHeight>1.0</staticSunShadowHeight>

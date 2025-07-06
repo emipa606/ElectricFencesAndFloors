@@ -35,8 +35,8 @@ public static class fenceCore
             return false;
         }
 
-        if (p?.guest != null && lord != null &&
-            lord.LordJob is LordJob_FormAndSendCaravan or LordJob_AssistColony or LordJob_VisitColony)
+        if (p?.guest != null && lord is
+                { LordJob: LordJob_FormAndSendCaravan or LordJob_AssistColony or LordJob_VisitColony })
         {
             // caravans, friendlies, visitors
             return true;
@@ -65,10 +65,10 @@ public static class fenceCore
         // player humanlike pawns
     }
 
-    public static int CoreGetDamage(CompPower FencePowerComp)
+    public static int CoreGetDamage(CompPower fencePowerComp)
     {
-        var powerGain = FencePowerComp.PowerNet.CurrentEnergyGainRate();
-        var powerStore = FencePowerComp.PowerNet.CurrentStoredEnergy();
+        var powerGain = fencePowerComp.PowerNet.CurrentEnergyGainRate();
+        var powerStore = fencePowerComp.PowerNet.CurrentStoredEnergy();
         var multiplier = 1;
         if (powerStore > 1000)
         {
@@ -80,7 +80,7 @@ public static class fenceCore
 
         // batteries
         var batteryDamage = 0;
-        foreach (var compPowerBattery in FencePowerComp.PowerNet.batteryComps)
+        foreach (var compPowerBattery in fencePowerComp.PowerNet.batteryComps)
         {
             var storedPower = compPowerBattery.StoredEnergy;
             if (storedPower > 10000)
@@ -95,10 +95,10 @@ public static class fenceCore
         return calcPower;
     }
 
-    public static int CoreGetPlasmaDamage(CompPower FencePowerComp)
+    public static int CoreGetPlasmaDamage(CompPower fencePowerComp)
     {
-        var powerGain = FencePowerComp.PowerNet.CurrentEnergyGainRate();
-        var powerStore = FencePowerComp.PowerNet.CurrentStoredEnergy();
+        var powerGain = fencePowerComp.PowerNet.CurrentEnergyGainRate();
+        var powerStore = fencePowerComp.PowerNet.CurrentStoredEnergy();
         var multiplier = 1;
         if (powerStore > 2000)
         {
@@ -115,7 +115,7 @@ public static class fenceCore
 
         // batteries
         var batteryDamage = 0;
-        foreach (var compPowerBattery in FencePowerComp.PowerNet.batteryComps)
+        foreach (var compPowerBattery in fencePowerComp.PowerNet.batteryComps)
         {
             var storedPower = compPowerBattery.StoredEnergy;
             if (storedPower > 5000)
@@ -130,9 +130,9 @@ public static class fenceCore
         return calcPower;
     }
 
-    public static void CoreDrainPower(CompPower FencePowerComp, float drainPowerMax)
+    public static void CoreDrainPower(CompPower fencePowerComp, float drainPowerMax)
     {
-        foreach (var compPowerBattery in FencePowerComp.PowerNet.batteryComps)
+        foreach (var compPowerBattery in fencePowerComp.PowerNet.batteryComps)
         {
             var storedPower = compPowerBattery.StoredEnergy;
             var drainPower = compPowerBattery.Props.storedEnergyMax / 10;
@@ -145,11 +145,11 @@ public static class fenceCore
         }
     }
 
-    public static void CoreAssignPawnDamage(Pawn p, int damage, Thing source, CompPower FencePowerComp,
+    public static void CoreAssignPawnDamage(Pawn p, int damage, Thing source, CompPower fencePowerComp,
         float drainPower)
     {
         // batteries
-        CoreDrainPower(FencePowerComp, drainPower);
+        CoreDrainPower(fencePowerComp, drainPower);
 
         int randomInRange;
         switch (damage)
@@ -179,14 +179,14 @@ public static class fenceCore
 
             var num2 = Mathf.Max(1, Mathf.RoundToInt(Rand.Value * damage));
             damage -= num2;
-            var dinfo = new DamageInfo(DamageDefOf.Burn, num2, -1, -1f, source);
+            var damageInfo = new DamageInfo(DamageDefOf.Burn, num2, -1, -1f, source);
             if (randomInRange > 2)
             {
-                dinfo = new DamageInfo(DamageDefOf.Flame, num2, -1, -1f, source);
+                damageInfo = new DamageInfo(DamageDefOf.Flame, num2, -1, -1f, source);
             }
 
-            dinfo.SetBodyRegion(height, BodyPartDepth.Outside);
-            p.TakeDamage(dinfo);
+            damageInfo.SetBodyRegion(height, BodyPartDepth.Outside);
+            p.TakeDamage(damageInfo);
 
             var sparks = new Effecter(DefDatabase<EffecterDef>.GetNamed("ConstructMetal"));
             // If we have a spark effecter

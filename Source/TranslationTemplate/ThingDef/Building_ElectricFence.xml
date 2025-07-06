@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Electric Fence -->
+  <Electric_fence.label>Electric Fence</Electric_fence.label>
+  <!-- EN: An electric fence is a barrier that uses electric shocks to deter animals from crossing a boundary. The voltage of the shock may have effects ranging from discomfort to death. -->
+  <Electric_fence.description>An electric fence is a barrier that uses electric shocks to deter animals from crossing a boundary. The voltage of the shock may have effects ranging from discomfort to death.</Electric_fence.description>
+  <!-- EN: Electric Fence Gate -->
+  <Electric_fence_door.label>Electric Fence Gate</Electric_fence_door.label>
+  <!-- EN: Electric Fence gate which is passable without any danger for the home crew. But still damages any hostile trying to pass through. -->
+  <Electric_fence_door.description>Electric Fence gate which is passable without any danger for the home crew. But still damages any hostile trying to pass through.</Electric_fence_door.description>
+  <!-- EN: Shock floor panel -->
+  <electricPanel.label>Shock floor panel</electricPanel.label>
+  <!-- EN: Electric floor panel that is designed to stun and shock hostiles -->
+  <electricPanel.description>Electric floor panel that is designed to stun and shock hostiles</electricPanel.description>
+  <!-- EN: Plasma Fence -->
+  <Plasma_fence.label>Plasma Fence</Plasma_fence.label>
+  <!-- EN: Plasma fence is an advanced version of electric fence that require high grade materials and careful assembly. Any hostile who tries to pass through is in danger of being burned by electric plasma arc. -->
+  <Plasma_fence.description>Plasma fence is an advanced version of electric fence that require high grade materials and careful assembly. Any hostile who tries to pass through is in danger of being burned by electric plasma arc.</Plasma_fence.description>
+  <!-- EN: Plasma Fence Gate -->
+  <Plasma_fence_door.label>Plasma Fence Gate</Plasma_fence_door.label>
+  <!-- EN: Plasma Fence gate which is passable without any danger for the home crew. But still damages any hostile trying to pass through. -->
+  <Plasma_fence_door.description>Plasma Fence gate which is passable without any danger for the home crew. But still damages any hostile trying to pass through.</Plasma_fence_door.description>
+</LanguageData>

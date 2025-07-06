@@ -1,0 +1,30 @@
+ManifestFileVersion: 0
+CRC: 1322570198
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 47975911c76e8ae79a6b5cc8ab16a2b6
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2612ac43db082a73502ee80f2eceb73f
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 47975911c76e8ae79a6b5cc8ab16a2b6
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/Mlie.ElectricFencesAndFloors/Textures/Building/Fence/ElectricFenceP_MenuIcon.png
+- Assets/Data/Mlie.ElectricFencesAndFloors/Textures/Building/Fence/ElectricFenceP_Gate_MenuIcon.png
+- Assets/Data/Mlie.ElectricFencesAndFloors/Textures/Building/Fence/ElectricFence_Gate_MenuIcon.png
+- Assets/Data/Mlie.ElectricFencesAndFloors/Textures/Building/Fence/ElectricFenceP_Atlas.png
+- Assets/Data/Mlie.ElectricFencesAndFloors/Textures/Building/Fence/ElectricFence_Atlas.png
+- Assets/Data/Mlie.ElectricFencesAndFloors/Textures/Building/Fence/ElectricFenceP_Gate_Mover.png
+- Assets/Data/Mlie.ElectricFencesAndFloors/Textures/Building/Fence/ElectricFence_MenuIcon.png
+- Assets/Data/Mlie.ElectricFencesAndFloors/Textures/Building/Fence/ElectricFence_Gate_Blueprint.png
+- Assets/Data/Mlie.ElectricFencesAndFloors/Textures/Building/Fence/ElectricFence_Gate_Mover.png
+- Assets/Data/Mlie.ElectricFencesAndFloors/Textures/Building/Fence/ElectricFence_Blueprint_Atlas.png
+- Assets/Data/Mlie.ElectricFencesAndFloors/Textures/Building/Fence/ElectricFence_floor.jpg
+Dependencies: []
