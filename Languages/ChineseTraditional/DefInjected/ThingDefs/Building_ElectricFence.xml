@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- electrical fence -->
+  <Electric_fence.label>電子圍欄</Electric_fence.label>
+  <Electric_fence.description>電子圍欄是一種利用電擊來阻止動物穿越邊界的屏障。電擊的電壓可能帶來從不適到死亡的效果。</Electric_fence.description>
+  <Blueprint_Electric_fence.label>電子圍欄（藍圖）</Blueprint_Electric_fence.label>
+  <Frame_Electric_fence.label>電子圍欄（建造）</Frame_Electric_fence.label>
+  <Frame_Electric_fence.description>電子圍欄是一種利用電擊來阻止動物穿越邊界的屏障。電擊的電壓可能帶來從不適到死亡的效果。</Frame_Electric_fence.description>
+  <!-- electrical fence door -->
+  <Electric_fence_door.label>電子圍欄門</Electric_fence_door.label>
+  <Electric_fence_door.description>電子圍欄門對本方人員通行無危險，但仍會傷害任何試圖穿越的敵對目標。</Electric_fence_door.description>
+  <Blueprint_Electric_fence_door.label>電子圍欄門（藍圖）</Blueprint_Electric_fence_door.label>
+  <Frame_Electric_fence_door.label>電子圍欄門（建造）</Frame_Electric_fence_door.label>
+  <Frame_Electric_fence_door.description>電子圍欄門對本方人員通行無危險，但仍會傷害任何試圖穿越的敵對目標。</Frame_Electric_fence_door.description>
+  <!-- plasma fence -->
+  <Plasma_fence.label>等離子圍欄</Plasma_fence.label>
+  <Plasma_fence.description>等離子圍欄是電子圍欄的高級版本，需要高級材料和精密組裝。任何試圖穿越的敵對目標都可能被電漿弧灼傷。</Plasma_fence.description>
+  <Blueprint_Plasma_fence.label>等離子圍欄（藍圖）</Blueprint_Plasma_fence.label>
+  <Frame_Plasma_fence.label>等離子圍欄（建造）</Frame_Plasma_fence.label>
+  <Frame_Plasma_fence.description>等離子圍欄是電子圍欄的高級版本，需要高級材料和精密組裝。任何試圖穿越的敵對目標都可能被電漿弧灼傷。</Frame_Plasma_fence.description>
+  <!-- plasma fence door -->
+  <Plasma_fence_door.label>等離子圍欄門</Plasma_fence_door.label>
+  <Plasma_fence_door.description>等離子圍欄門對本方人員通行無危險，但仍會傷害任何試圖穿越的敵對目標。</Plasma_fence_door.description>
+  <Blueprint_Plasma_fence_door.label>等離子圍欄門（藍圖）</Blueprint_Plasma_fence_door.label>
+  <Frame_Plasma_fence_door.label>等離子圍欄門（建造）</Frame_Plasma_fence_door.label>
+  <Frame_Plasma_fence_door.description>等離子圍欄門對本方人員通行無危險，但仍會傷害任何試圖穿越的敵對目標。</Frame_Plasma_fence_door.description>
+  <!-- trap floor panel -->
+  <electricPanel.label>電擊地板面板</electricPanel.label>
+  <electricPanel.description>設計用於眩暈並電擊敵對目標的電力地板面板。</electricPanel.description>
+  <Blueprint_electricPanel.label>電擊地板面板（藍圖）</Blueprint_electricPanel.label>
+  <Frame_electricPanel.label>電擊地板面板（建造）</Frame_electricPanel.label>
+  <Frame_electricPanel.description>設計用於眩暈並電擊敵對目標的電力地板面板。</Frame_electricPanel.description>
+</LanguageData>
+
