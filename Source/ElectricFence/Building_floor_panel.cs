@@ -98,8 +98,10 @@ public class Building_floor_panel : Building_Trap
     protected override void Tick()
     {
         var thingList = Position.GetThingList(Map);
-        foreach (var thing in thingList)
+        // ReSharper disable once ForCanBeConvertedToForeach
+        for (var index = 0; index < thingList.Count; index++)
         {
+            var thing = thingList[index];
             if (thing is not Pawn pawn || touchingPawns.Contains(pawn))
             {
                 continue;
@@ -109,9 +111,9 @@ public class Building_floor_panel : Building_Trap
             checkSpring(pawn);
         }
 
-        for (var j = 0; j < touchingPawns.Count; j++)
+        for (var index = 0; index < touchingPawns.Count; index++)
         {
-            var pawn2 = touchingPawns[j];
+            var pawn2 = touchingPawns[index];
             if (!pawn2.Spawned || pawn2.Position != Position)
             {
                 touchingPawns.Remove(pawn2);

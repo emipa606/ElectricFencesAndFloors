@@ -3,4 +3,13 @@
     <BuildType Name="Release" />
   </Configurations>
   <Project Path="ElectricFence/ElectricFence.csproj" />
+  <Folder Name="/.github/">
+    <File Path="../.github/copilot-instructions.md" />
+  </Folder>
+  <Folder Name="/XML/1.6/Defs/ThingDefs/">
+    <File Path="../1.6/Defs/ThingDefs/Building_ElectricFence.xml" />
+  </Folder>
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
 </Solution>

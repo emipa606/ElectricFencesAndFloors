@@ -84,9 +84,10 @@ public class Building_fence_door : Building_Door
     protected override void Tick()
     {
         var thingList = Position.GetThingList(Map);
-        for (var i = 0; i < thingList.Count; i++)
+        // ReSharper disable once ForCanBeConvertedToForeach
+        for (var index = 0; index < thingList.Count; index++)
         {
-            var thing = thingList[i];
+            var thing = thingList[index];
             if (thing is not Pawn pawn || touchingPawns.Contains(pawn))
             {
                 continue;
@@ -96,12 +97,12 @@ public class Building_fence_door : Building_Door
             checkSpring(pawn);
         }
 
-        for (var j = touchingPawns.Count - 1; j >= 0; j--)
+        for (var index = touchingPawns.Count - 1; index >= 0; index--)
         {
-            var pawn2 = touchingPawns[j];
+            var pawn2 = touchingPawns[index];
             if (!pawn2.Spawned || pawn2.Position != Position)
             {
-                touchingPawns.RemoveAt(j);
+                touchingPawns.RemoveAt(index);
             }
         }
 
