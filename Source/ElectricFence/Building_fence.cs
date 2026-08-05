@@ -83,8 +83,9 @@ public class Building_fence : Building_Trap
     protected override void Tick()
     {
         var thingList = Position.GetThingList(Map);
-        foreach (var thing in thingList)
+        for (var i = 0; i < thingList.Count; i++)
         {
+            var thing = thingList[i];
             if (thing is not Pawn pawn || touchingPawns.Contains(pawn))
             {
                 continue;
@@ -94,12 +95,12 @@ public class Building_fence : Building_Trap
             checkSpring(pawn);
         }
 
-        for (var j = 0; j < touchingPawns.Count; j++)
+        for (var j = touchingPawns.Count - 1; j >= 0; j--)
         {
             var pawn2 = touchingPawns[j];
             if (!pawn2.Spawned || pawn2.Position != Position)
             {
-                touchingPawns.Remove(pawn2);
+                touchingPawns.RemoveAt(j);
             }
         }
 
