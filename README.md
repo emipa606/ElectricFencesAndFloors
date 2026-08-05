@@ -1,15 +1,15 @@
 # [Electric Fences and Floors (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2138712589)
 
-![Image](https://i.imgur.com/buuPQel.png)
+![Image](https://img.litet.net/logos/Info.png)
 
 Update of BookBurners mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1103101448
 
 - The doors cannot be linked to the fences since the game only allows linking to impassable objects
 
-![Image](https://i.imgur.com/pufA0kM.png)
+![Image](https://img.litet.net/logos/Notice.png)
 	
-![Image](https://i.imgur.com/Z4GOv8H.png)
+![Image](https://img.litet.net/logos/OriginalDescription.png)
 
 Electric fences have been used as perimeter security measures during the whole span of the 20th century ranging from stun fences to lethal perimeter defense.
 
@@ -33,13 +33,13 @@ Chemical plant: https://steamcommunity.com/sharedfiles/filedetails/?id=159666265
 Dickbutt mod: https://steamcommunity.com/sharedfiles/filedetails/?id=1128770769
 
 
-![Image](https://i.imgur.com/PwoNOj4.png)
+![Image](https://img.litet.net/logos/ReportingIssues.png)
 
 
 
 -  See if the the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using [HugsLib](https://steamcommunity.com/workshop/filedetails/?id=818773962) or the standalone [Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) and command Ctrl+F12
+-  Always post your log using the [Log Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404)
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
@@ -47,4 +47,4 @@ Dickbutt mod: https://steamcommunity.com/sharedfiles/filedetails/?id=1128770769
 
  
 
-[![Image](https://img.shields.io/github/v/release/emipa606/ElectricFencesAndFloors?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2138712589) | tags:  electricity, defense
+[![Image](https://img.shields.io/github/v/release/emipa606/ElectricFencesAndFloors?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2138712589) | defense, electricity

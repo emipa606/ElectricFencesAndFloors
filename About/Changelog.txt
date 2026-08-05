@@ -1,5 +1,8 @@
 # Changelog for ElectricFencesAndFloors
 
+1.6.1 - Updated chinese translation, thanks ylc395
+
+
 1.6.0 - Mod updated for 1.6 and passed autotests
 
 
