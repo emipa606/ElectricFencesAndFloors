@@ -1,58 +1,60 @@
-# Copilot Instructions for Electric Fences and Floors (Continued)
+# GitHub Copilot Instructions for Electric Fences and Floors (Continued) Mod
+
+Welcome to the Electric Fences and Floors (Continued) mod for RimWorld. This mod aims to bring electric fences and plasma fence systems to the game, providing a more dynamic and deadly perimeter defense option.
 
 ## Mod Overview and Purpose
 
-**Mod Name:** Electric Fences and Floors (Continued)
-
-**Author:** BookBurner
-
-Electric Fences and Floors is a mod for RimWorld that enhances colony defense by introducing electric fences and floors. These constructions connect to your power grid and provide varying levels of damage to potentially hostile entities, including animals and neutral factions. The intent of the mod is to simulate realistic perimeter security measures with electric and plasma fences, along with stun floor panels.
+The Electric Fences and Floors (Continued) mod aims to add electric fence and plasma fence systems to RimWorld. These fences work as power conduits that can be climbed but do burn damage to anything potentially hostile that might try to pass through them when connected to the power grid. The more power stored in the grid, the more efficient the fence is. The mod also includes a stun floor panel that can be used to incapacitate enemies.
 
 ## Key Features and Systems
 
-- **Electric Fence:** Operates as a power conduit that can be climbed like sandbags but deals burn damage when powered. Damage increases with power availability in the grid.
-  
-- **Electric Fence Gate:** Functions as a normal gate for friendlies but damages hostile entities upon interaction.
-  
-- **Plasma Fence:** Offers an alternative version with power calculations that favor stable power inputs, increasing effectiveness under specific conditions.
-  
-- **Stun Floor Panels:** Designed to stun any entities passing over them when connected to a power source.
-
-- **Dynamic Damage Calculation:** Both fences and gates calculate damage based on net power gain and stored power within the power grid. Greater power leads to more efficient defenses.
+- **Electric Fence**: A power conduit that can be climbed but does burn damage to anything potentially hostile.
+- **Electric Fence Gate**: A gate that can be opened by anyone but that does damage to potentially hostile factions.
+- **Plasma Fence**: A high-power fence that favors large stable power gains.
+- **Stun Floor Panels**: A floor panel that can be used to incapacitate enemies.
 
 ## Coding Patterns and Conventions
 
-- **C# Files:** The project consists of several C# files located in the `Source` directory. Each file corresponds to a major component of the mod, such as `fenceCore.cs` or `Building_p_fence_door.cs`.
-  
-- **Class and Method Naming:** The project uses camel case for method names (e.g., `CoreAssignPawnDamage`) and Pascal case for class names (e.g., `Building_p_fence`).
-
-- **Method Responsibilities:** Methods are designed to handle specific tasks, such as `CoreDrainPower` managing power depletion, or `PawnCanOpen` determining if a pawn can open a gate.
+- **Mod Structure**: The mod is structured with separate C# files for different building types and core functionality.
+- **Naming Conventions**: Use clear and descriptive names for classes, methods, and variables.
+- **Code Organization**: Organize code into logical sections and use comments to explain complex logic.
 
 ## XML Integration
 
-- **ThingDefs XML:** The mod makes use of XML files to define object attributes and behaviors. Key XML files like `Building_ElectricFence.xml` and `ImpliedDefs.xml` reside in the `Defs` directory.
-
-- **Integration with C#:** XML definitions are referenced in C# code to apply configurations like damage types and connection properties to in-game objects.
+- **Defs Files**: The mod uses XML files to define new game elements such as ThingDefs and ImpliedDefs.
+- **Def Structure**: Follow the RimWorld def structure and use the provided XML files as templates.
 
 ## Harmony Patching
 
-- **Purpose and Implementation:** The mod uses Harmony to modify existing game behavior, ensuring compatibility and integration with RimWorld’s core systems without altering original game code directly.
-
-- **Typical Patch Applications:** Typical uses include patching methods for things like power usage or damage application without reinventing base game functionalities.
+- **Harmony Patching**: Use Harmony patches to modify existing game behavior without altering the original game files.
+- **Patch Location**: Place harmony patches in the appropriate C# files.
+- **Patch Structure**: Follow the Harmony patching pattern and ensure that patches are correctly named and organized.
 
 ## Suggestions for Copilot
 
-- When working on C# files:
-  - Suggest method autocompletions based on class responsibilities, such as power management or damage calculations.
-  - Predict variable declarations based on the existing naming conventions and types used in the project.
+1. **Feature Request**: Ask Copilot to generate new features for the mod, such as additional fence types or new mechanics.
+2. **Code Optimization**: Ask Copilot to optimize existing code for performance and readability.
+3. **Bug Fixing**: Ask Copilot to help identify and fix bugs in the mod.
+4. **Documentation**: Ask Copilot to generate documentation for new features or updated code.
 
-- For XML file handling:
-  - Assist in auto-completing XML schema elements specific to RimWorld's modding framework.
-  - Ensure consistency in referencing XML tag names in C# definitions.
+## Example Usage
 
-- Provide inline documentation suggestions for complex code segments to improve maintainability and collaborative development.
+- **Feature Request**: "Can you generate a new type of fence that uses EMP technology?"
+- **Code Optimization**: "Can you optimize the damage calculation logic for the electric fence?"
+- **Bug Fixing**: "Can you help identify and fix the issue with the electric fence gate not opening properly?"
+- **Documentation**: "Can you generate documentation for the new plasma fence system?"
 
-By following these guidelines, contributors can effectively expand on the Electric Fences and Floors mod, ensuring high-quality code integration and functionality within RimWorld's modding ecosystem.
+## Support
+
+For best support, please use the Discord-channel for error-reporting. Do not report errors by making a discussion-thread, as you won't receive any notification. If you have a solution for a problem, please post it to the GitHub repository. Use RimSort to sort your mods.
+
+## License
+
+This mod is licensed under the MIT License. You are free to use, modify, and distribute the mod as long as you include the original license and copyright notice.
+
+## Contact
+
+If you have any questions or suggestions for the mod, please feel free to contact me via the GitHub repository.
 
 ## Project Solution Guidelines
 - Relevant mod XML files are included as Solution Items under the solution folder named XML, these can be read and modified from within the solution.
@@ -66,4 +68,6 @@ By following these guidelines, contributors can effectively expand on the Electr
 ## Hard rules (must follow)
 - Do NOT run commands that modify the repo (no git commit, git apply, dotnet format) unless explicitly asked.
 - Prefer minimal reads: read only the smallest code region needed (around the suspicious lines).
+- When mentioning SonarQube issues, automatically use the SonarQube MCP service to fetch and address issues instead of making inferred fixes without querying SonarQube first.
+- When mentioning the rimworld log, automatically use the Rimworld MCP service to fetch the log.
 

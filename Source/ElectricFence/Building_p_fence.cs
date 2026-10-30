@@ -55,9 +55,6 @@ public class Building_p_fence : Building_Trap
     private void springFence(Pawn p)
     {
         SoundDef.Named("EnergyShieldBroken").PlayOneShot(new TargetInfo(Position, Map));
-        //if (p != null && p.Faction != null) {
-        //	p.Faction.TacticalMemory.TrapRevealed (base.Position, base.Map);
-        //}
         SpringSub(p);
     }
 
